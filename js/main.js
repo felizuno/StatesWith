@@ -22,6 +22,8 @@
       var self = this;
 
       $('.add-map').click(function(e) {
+        // $(this) == the thing you clicked on
+        self.utils.hide($(this));
         self.showAddMapForm();
       });
 
@@ -41,6 +43,13 @@
       $el
         .attr('aria-hidden', 'false')
         .show();
+
+      return this;
+    },
+    hide: function($el) {
+      $el
+        .attr('aria-hidden', 'true')
+        .hide();
 
       return this;
     }
