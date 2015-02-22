@@ -22,7 +22,10 @@
 
   <body>
     <h1 class="page-title">States with ________</h1>
-    <form id="new-state" action="/saveState" >
+    
+    <button class="add-map">Add a new map</button>
+
+    <form id="new-map" action="/saveState" aria-hidden="true">
       <fieldset>
         <label for="caption">States with:</label>
         <input type="text" name="caption" id="caption">
